@@ -10,7 +10,13 @@
       <div id="main-header">
         <!--header-->
         <p class="title left">MY TODOLIST</p>
-        <img class="right" src="./img/add.png" alt="Add Task" width="50px">
+        <div class="one">
+          <a href="#add" id="button_add"><img class="right" src="./img/add.png" alt="Add Task" width="50px"></a>
+        </div>
+        <div class="two">
+          <a href="#close" id="button_close"><img class="right" src="./img/close.png" alt="Close" width="50px"></a>
+        </div>
+
         <hr class="clear">
         <!--end header-->
         <div class="clear"></div>
@@ -43,7 +49,7 @@
 
 
       <div id="next-container">
-        <div class="p2 right"><a href="#"><u>Clear</u></a></div>
+        <div class="p2 right"><a id="clear" href="#"><u>Clear</u></a></div>
         <br>
         <p class="title left">TITLE</p>
         <br>
@@ -62,7 +68,7 @@
         <br>
         <p class="title left">END AT</p>
         <br>
-        <input type="date"  name="End at">
+        <input type="date" name="End at">
 
         <div class="clear"></div>
       </div>
@@ -79,7 +85,7 @@
         <div class="two">
           <div class="p2">
             <hr>
-            <p>Show: <span>All task</span><span>Todo task</span><span>Done task</span></p>
+            <p><span>Add task and create new one</span><span>Add task</span></p>
             <hr>
           </div>
         </div>
@@ -87,5 +93,8 @@
 
     </div>
   </body>
-  <script src="./script.js"></script>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+
+  </script>
 </html>

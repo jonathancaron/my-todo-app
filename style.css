@@ -42,23 +42,28 @@ a{
 }
 #main-container{
   min-height: 300px;
-  display: none;
+
 }
 #next-container{
   min-height: 300px;
+  display: none;
 
 }
-#main-footer .p2 span{
-  margin-left: 14px;
+.p2 span{
+  margin-left: 20px;
 }
 #main-footer{
   text-align: center;
 }
 #main-footer .one{
-  display: none;
 }
 #main-footer .two{
   margin-top: 30px;
+}
+.one{
+}
+.two{
+  display: none;
 }
 .p2{
   color: #969698;
