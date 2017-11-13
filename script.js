@@ -7,6 +7,14 @@ let nextcontainer = document.getElementById('next-container');
 let footerone = document.getElementById('footer-one');
 let footertwo = document.getElementById('footer-two');
 
+let clear = document.getElementById('clear');
+
+let title = document.getElementById('title');
+let desc = document.getElementById('desc');
+let startdate = document.getElementById('start_date');
+let enddate = document.getElementById('end_date');
+
+
 
 add.addEventListener('click', function(event) {
   add.style.display = 'none';
@@ -28,37 +36,10 @@ close.addEventListener('click', function(event) {
   close.style.display = 'none';
 
 });
+clear.addEventListener('click', function(event) {
+  title.value = "";
+  desc.value = "";
+  startdate.value = "";
+  enddate.value = "";
 
-/*$(function(){
-  $("#button_add").click(function() {
-    $(".one").hide();
-    $("#main-container").hide();
-    $(".two").show(1000);
-    $("#next-container").show(1000);
-  });
-
-  $("#button_close").click(function() {
-    $(".two").hide();
-    $("#next-container").hide();
-    $(".one").show(1000);
-    $("#main-container").show(1000);
-  });
-  $("#clear").click(function() {
-    $('input').val('').change();
-  });
-  $("#task_all").click(function() {
-    $(".puce1").show(500);
-    $(".puce2").show(500);
-    $(".puce3").show(500);
-  });
-  $("#task_todo").click(function() {
-    $(".puce1").hide(500);
-    $(".puce2").show(500);
-    $(".puce3").hide(500);
-  });
-  $("#task_done").click(function() {
-    $(".puce1").show(500);
-    $(".puce2").hide(500);
-    $(".puce3").show(500);
-  });
-});*/
+});

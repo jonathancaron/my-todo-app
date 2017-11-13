@@ -49,26 +49,26 @@
 
 
       <div id="next-container">
-        <div class="p2 right"><a id="clear" href="#"><u>Clear</u></a></div>
+        <div class="p2 right"><a id="clear" href="#clear"><u>Clear</u></a></div>
         <br>
         <p class="title left">TITLE</p>
         <br>
-        <input type="search" name="Title" placeholder="  My todo title">
+        <input id="title" type="search" name="Title" placeholder="  My todo title">
         <div class="clear"></div>
         <br>
         <p class="title left">DESCRIPTION</p>
         <br>
-        <input type="search" name="Description" placeholder="  My todo description">
+        <input id="desc"  type="search" name="Description" placeholder="  My todo description">
         <div class="clear"></div>
         <br>
         <p class="title left">START AT</p>
         <br>
-        <input type="date"  name="End at">
+        <input id="start_date" type="date"  name="End at">
         <div class="clear"></div>
         <br>
         <p class="title left">END AT</p>
         <br>
-        <input type="date" name="End at">
+        <input id="end_date" type="date" name="End at">
 
         <div class="clear"></div>
       </div>
