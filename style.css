@@ -17,6 +17,12 @@ input[type=search] {
   width: 500px;
   color: #969698;
 }
+input[type=date] {
+  border: 0px;
+  border-bottom: 1px solid #999;
+  width: 500px;
+  color: #969698;
+}
 a{
   text-decoration: none;
   color: #969698;

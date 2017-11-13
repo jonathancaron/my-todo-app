@@ -57,12 +57,13 @@
         <br>
         <p class="title left">START AT</p>
         <br>
-        <input type="search" name="Start at" placeholder="  December 12, 2 PM">
+        <input type="date"  name="End at">
         <div class="clear"></div>
         <br>
         <p class="title left">END AT</p>
         <br>
-        <input type="search" name="End at" placeholder="  December 12, 2 PM">
+        <input type="date"  name="End at">
+
         <div class="clear"></div>
       </div>
 
