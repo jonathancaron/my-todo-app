@@ -46,17 +46,41 @@
         <div class="p2 right"><a href="#"><u>Clear</u></a></div>
         <br>
         <p class="title left">TITLE</p>
+        <br>
+        <input type="search" name="Title" placeholder="  My todo title">
         <div class="clear"></div>
-        <input type="search" name="Title" value="  My todo title">
+        <br>
+        <p class="title left">DESCRIPTION</p>
+        <br>
+        <input type="search" name="Description" placeholder="  My todo description">
+        <div class="clear"></div>
+        <br>
+        <p class="title left">START AT</p>
+        <br>
+        <input type="search" name="Start at" placeholder="  December 12, 2 PM">
+        <div class="clear"></div>
+        <br>
+        <p class="title left">END AT</p>
+        <br>
+        <input type="search" name="End at" placeholder="  December 12, 2 PM">
         <div class="clear"></div>
       </div>
 
 
       <div id="main-footer">
-        <div class="p2">
-          <hr>
-          <p>Show: <span>All task</span><span>Todo task</span><span>Done task</span></p>
-          <hr>
+        <div class="one">
+          <div class="p2">
+            <hr>
+            <p>Show: <span>All task</span><span>Todo task</span><span>Done task</span></p>
+            <hr>
+          </div>
+        </div>
+        <div class="two">
+          <div class="p2">
+            <hr>
+            <p>Show: <span>All task</span><span>Todo task</span><span>Done task</span></p>
+            <hr>
+          </div>
         </div>
       </div>
 
