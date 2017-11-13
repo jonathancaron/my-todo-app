@@ -9,7 +9,7 @@ li{
   margin-left: -15px;
 }
 hr{
-  color:#e2e2e2;
+  border-top: 1px solid #e2e2e2;
 }
 input[type=search] {
   border: 0px;
