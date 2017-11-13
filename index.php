@@ -42,7 +42,13 @@
       </div>
 
 
-      <div class="next-container">
+      <div id="next-container">
+        <div class="p2 right"><a href="#"><u>Clear</u></a></div>
+        <br>
+        <p class="title left">TITLE</p>
+        <div class="clear"></div>
+        <input type="search" name="Title" value="  My todo title">
+        <div class="clear"></div>
       </div>
 
 

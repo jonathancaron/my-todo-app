@@ -11,6 +11,19 @@ li{
 hr{
   color:#e2e2e2;
 }
+input[type=search] {
+
+  border: 0px solid #999;
+  border-bottom: 1px solid #999;
+  width: 500px;
+  -webkit-appearance: none;
+  color: #969698;
+
+}
+a{
+  text-decoration: none;
+  color: #969698;
+}
 .puce1 li{list-style-image: url('./img/chip-circle-full.png');}
 .puce2 li{list-style-image: url('./img/chip-circle-empty.png');}
 .puce3 li{list-style-image: url('./img/chip-circle-full-red.png');}
@@ -22,10 +35,15 @@ hr{
   margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px;
-  max-width: 600px;
+  max-width: 500px;
 }
 #main-container{
   min-height: 300px;
+  display: none;
+}
+#next-container{
+  min-height: 300px;
+
 }
 #main-footer .p2 span{
   margin-left: 14px;
