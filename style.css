@@ -4,11 +4,23 @@ body{
   font-family: sans-serif;
 }
 
-li{
+.puce1 li{
   line-height: 30px;
-  text-decoration: none;
   list-style-type: none;
-  margin-left: -40px;
+  list-style-image: url('./img/chip-circle-full.png');
+  margin-left: -15px;
+}
+.puce2 li{
+  line-height: 30px;
+  list-style-type: none;
+  list-style-image: url('./img/chip-circle-empty.png');
+  margin-left: -15px;
+}
+.puce3 li{
+  line-height: 30px;
+  list-style-type: none;
+  list-style-image: url('./img/chip-circle-full-red.png');
+  margin-left: -15px;
 }
 /*div{
   border: 1px solid black;
@@ -29,6 +41,9 @@ li{
 }
 .barre{
   text-decoration: line-through;
+}
+.barre-red{
+  text-decoration: line-through #DB0B0B;
 }
 .title{
   color: #969698;

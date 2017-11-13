@@ -8,26 +8,34 @@
   <body>
     <div id="main">
       <div id="main-header">
-
-      </div>
-      <div id="main-container">
         <!--header-->
-        <div class="line">
-          <p class="title left">MY TODOLIST</p>
-          <img class="right" src="./img/add.png" alt="Add Task" width="50px">
-          <hr class="clear">
-        </div>
+        <p class="title left">MY TODOLIST</p>
+        <img class="right" src="./img/add.png" alt="Add Task" width="50px">
+        <hr class="clear">
         <!--end header-->
         <div class="clear"></div>
-        <!--tasks done-->
-        <div class="line">
-            <ul class="p2 barre">
-              <li><img src="./img/chip-circle-full.png" width="10px"> Take a shower </li>
-              <li><img src="./img/chip-circle-full.png" width="10px"> Make my bag </li>
-              <li><img src="./img/chip-circle-full.png" width="10px"> Take a breakfast </li>
-            </ul>
-        </div>
-        <!--end tasks done-->
+      </div>
+      <div id="main-container">
+        <!--tasks -->
+        <ul class="list p2" id="todo">
+          <div class="puce1 barre">
+            <li class="list-item">Take a shower</li>
+            <li class="list-item">Make my bag</li>
+            <li class="list-item">Take a breakfast</li>
+          </div>
+          <br>
+          <div class="puce2">
+            <li class="list-item">Go to the bus stop</li>
+            <li class="list-item">Be at BeCode on 9:00</li>
+            <li class="list-item">Start coding</li>
+            <li class="list-item">I need a real BREAK</li>
+          </div>
+          <br>
+          <div class="puce3 barre-red">
+            <li class="list-item">Go to the bus stop</li>
+          </div>
+        </ul>
+        <!--end tasks-->
         <div class="clear"></div>
 
 
