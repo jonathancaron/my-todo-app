@@ -14,6 +14,16 @@ body{
 #main-container{
   min-height: 800px;
 }
+.p2{
+  color: #969698;
+  font-size: 18px;
+}
+li{
+  line-height: 30px;
+}
+.barre{
+  text-decoration: line-through;
+}
 .title{
   color: #969698;
   font-size: 20px;
