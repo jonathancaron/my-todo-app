@@ -55,14 +55,16 @@ a{
 #main-footer{
   text-align: center;
 }
-#main-footer .one{
+#main-footer #footer-one{
 }
-#main-footer .two{
+#main-footer #footer-two{
   margin-top: 30px;
 }
-.one{
+
+#footer-two{
+  display: none;
 }
-.two{
+#button_close{
   display: none;
 }
 .p2{

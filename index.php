@@ -75,14 +75,14 @@
 
 
       <div id="main-footer">
-        <div class="one">
+        <div id="footer-one">
           <div class="p2">
             <hr>
-            <p>Show: <span>All task</span><span>Todo task</span><span>Done task</span></p>
+            <p>Show: <span id="task_all"><a href="#alltask">All task</a></span><span id="task_todo"><a href="#todotask">Todo task</a></span><span id="task_done"><a href="#donetask">Done task</a></span></p>
             <hr>
           </div>
         </div>
-        <div class="two">
+        <div id="footer-two">
           <div class="p2">
             <hr>
             <p><span>Add task and create new one</span><span>Add task</span></p>
