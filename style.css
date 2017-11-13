@@ -3,25 +3,17 @@ body{
   padding: 0;
   font-family: sans-serif;
 }
-
-.puce1 li{
+li{
   line-height: 30px;
   list-style-type: none;
-  list-style-image: url('./img/chip-circle-full.png');
   margin-left: -15px;
 }
-.puce2 li{
-  line-height: 30px;
-  list-style-type: none;
-  list-style-image: url('./img/chip-circle-empty.png');
-  margin-left: -15px;
+hr{
+  color:#e2e2e2;
 }
-.puce3 li{
-  line-height: 30px;
-  list-style-type: none;
-  list-style-image: url('./img/chip-circle-full-red.png');
-  margin-left: -15px;
-}
+.puce1 li{list-style-image: url('./img/chip-circle-full.png');}
+.puce2 li{list-style-image: url('./img/chip-circle-empty.png');}
+.puce3 li{list-style-image: url('./img/chip-circle-full-red.png');}
 /*div{
   border: 1px solid black;
 }*/
@@ -33,7 +25,13 @@ body{
   max-width: 600px;
 }
 #main-container{
-  min-height: 800px;
+  min-height: 300px;
+}
+#main-footer .p2 span{
+  margin-left: 14px;
+}
+#main-footer{
+  text-align: center;
 }
 .p2{
   color: #969698;

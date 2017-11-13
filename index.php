@@ -47,6 +47,11 @@
 
 
       <div id="main-footer">
+        <div class="p2">
+          <hr>
+          <p>Show: <span>All task</span><span>Todo task</span><span>Done task</span></p>
+          <hr>
+        </div>
       </div>
 
     </div>
