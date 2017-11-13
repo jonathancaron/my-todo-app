@@ -3,13 +3,15 @@ body{
   padding: 0;
   font-family: sans-serif;
 }
-
+li{
+  line-height: 30px;
+}
 #main{
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  max-width: 1200px;
+  max-width: 900px;
 }
 #main-container{
   min-height: 800px;
@@ -17,9 +19,6 @@ body{
 .p2{
   color: #969698;
   font-size: 18px;
-}
-li{
-  line-height: 30px;
 }
 .barre{
   text-decoration: line-through;
@@ -41,13 +40,10 @@ li{
   display: inline-block;
 }
 .un{
-  width: 200px;
+  width: 700px;
 }
 .deux{
-  width: 750px;
-}
-.trois{
-  width: 200px;
+  width: 150px;
 }
 .clear {
     clear: both;
