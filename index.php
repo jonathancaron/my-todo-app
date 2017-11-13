@@ -24,20 +24,20 @@
       <div id="main-container">
         <!--tasks -->
         <ul class="list p2" id="todo">
-          <div class="puce1 barre">
+          <div class="puce1 barre" id="puce1">
             <li class="list-item">Take a shower</li>
             <li class="list-item">Make my bag</li>
             <li class="list-item">Take a breakfast</li>
+            <br>
           </div>
-          <br>
-          <div class="puce2">
+          <div class="puce2" id="puce2">
             <li class="list-item">Go to the bus stop</li>
             <li class="list-item">Be at BeCode on 9:00</li>
             <li class="list-item">Start coding</li>
             <li class="list-item">I need a real BREAK</li>
+            <br>
           </div>
-          <br>
-          <div class="puce3 barre-red">
+          <div class="puce3 barre-red" id="puce3">
             <li class="list-item">Go to the bus stop</li>
           </div>
         </ul>
