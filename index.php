@@ -1,11 +1,14 @@
+<?php include('./core/request.php') ?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>My Todo App</title>
     <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+
     <div id="main">
       <div id="main-header">
         <!--header-->
@@ -24,20 +27,36 @@
       <div id="main-container">
         <!--tasks -->
         <ul class="list p2" id="todo">
-          <div class="puce1 barre" id="puce1">
+          <div class="barre" id="puce1">
             <li class="list-item">Take a shower</li>
             <li class="list-item">Make my bag</li>
             <li class="list-item">Take a breakfast</li>
             <br>
           </div>
-          <div class="puce2" id="puce2">
-            <li class="list-item">Go to the bus stop</li>
-            <li class="list-item">Be at BeCode on 9:00</li>
-            <li class="list-item">Start coding</li>
-            <li class="list-item">I need a real BREAK</li>
+          <div id="puce2">
+            <li class="list-item">Go to the bus stop
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <li class="list-item">Be at BeCode on 9:00
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <li class="list-item">Start coding
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <li class="list-item">I need a real BREAK
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
             <br>
           </div>
-          <div class="puce3 barre-red" id="puce3">
+          <div class="barre-red" id="puce3">
             <li class="list-item">Go to the bus stop</li>
           </div>
         </ul>

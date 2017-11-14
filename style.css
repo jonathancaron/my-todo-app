@@ -27,9 +27,9 @@ a{
   text-decoration: none;
   color: #969698;
 }
-.puce1 li{list-style-image: url('./img/chip-circle-full.png');}
-.puce2 li{list-style-image: url('./img/chip-circle-empty.png');}
-.puce3 li{list-style-image: url('./img/chip-circle-full-red.png');}
+#puce1 li{list-style-image: url('./img/chip-circle-full.png');}
+#puce2 li{list-style-image: url('./img/chip-circle-empty.png');}
+#puce3 li{list-style-image: url('./img/chip-circle-full-red.png');}
 /*div{
   border: 1px solid black;
 }*/
@@ -99,3 +99,5 @@ a{
 .clear {
     clear: both;
 }
+.desc{display:none;}
+.hidden{display:none;}

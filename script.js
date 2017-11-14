@@ -23,6 +23,55 @@ let puce3 = document.getElementById('puce3');
 
 
 
+/*function getEventTarget(e) {
+    e = e || window.event;
+    return e.target || e.srcElement;
+}
+
+var ul = document.getElementById('puce2');
+ul.onclick = function(event) {
+    var target = getEventTarget(event);
+    var next = target.nextSibling;
+    alert(next.innerHTML);
+
+
+};*/
+var listItems = document.getElementsByClassName('list-item');
+
+let i = 0;
+while (listItems[i]) {
+listItems[i].addEventListener('click',
+function () {
+let children = this.children;
+if (this.id == 'clicked') {
+
+  for (j = 0; j < children.length; j++) {
+    if(children[j].className == 'desc') {
+      children[j].style.display = 'none';
+    }
+  }
+  this.id = 'hidden';
+}
+else {
+
+  for (j = 0; j < children.length; j++) {
+    if (children[j].className == 'desc') {
+      children[j].style.display = 'block';
+    }
+    else {
+      children[j].style.display = 'block';
+    }
+  }
+  this.id = 'clicked';
+}
+}
+);
+i++;
+}
+
+
+
+
 add.addEventListener('click', function(event) {
   add.style.display = 'none';
   maincontainer.style.display = 'none';
@@ -63,5 +112,5 @@ tasktodo.addEventListener('click', function(event) {
 taskdone.addEventListener('click', function(event) {
   puce1.style.display = 'block';
   puce2.style.display = 'none';
-  puce3.style.display = 'block';  
+  puce3.style.display = 'block';
 });
