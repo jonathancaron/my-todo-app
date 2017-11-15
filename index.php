@@ -29,9 +29,15 @@
         <ul class="list p2" id="todo">
 
           <div class="barre" id="puce1">
-            <li class="list-item">Take a shower</li>
-            <li class="list-item">Make my bag</li>
-            <li class="list-item">Take a breakfast</li>
+            <?php
+              for ($i=0; $i < count($tab); $i++) {
+                if($tab[$i][5] > $tab[$i][4] && $tab[$i][5] !="")
+                {
+                  $addTitle =  $tab[$i][1];
+                  echo "<li class=\"list-item\">$addTitle</li>";
+                }
+              }
+            ?>
             <br>
           </div>
           <div id="puce2">
@@ -48,11 +54,22 @@
                     </div>
                   </li>";
                 }
+
               }
             ?>
+            <br>
           </div>
           <div class="barre-red" id="puce3">
-            <li class="list-item">Go to the bus stop</li>
+            <?php
+              for ($i=0; $i < count($tab); $i++) {
+                if($tab[$i][5] < $tab[$i][4] && $tab[$i][5] !="")
+                {
+                  $addTitle =  $tab[$i][1];
+                  echo "<li class=\"list-item\">$addTitle</li>";
+                }
+              }
+            ?>
+            <br>
           </div>
         </ul>
         <!--end tasks-->
