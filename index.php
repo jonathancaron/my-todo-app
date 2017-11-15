@@ -8,9 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <?php
-      echo $tab[0][0];
-    ?>
+
     <div id="main">
       <div id="main-header">
         <!--header-->
@@ -37,27 +35,21 @@
             <br>
           </div>
           <div id="puce2">
-            <li class="list-item">Go to the bus stop
-              <div class="desc">
-                <p><span>Done</span> <span>Edit</span></p>
-              </div>
-            </li>
-            <li class="list-item">Be at BeCode on 9:00
-              <div class="desc">
-                <p><span>Done</span> <span>Edit</span></p>
-              </div>
-            </li>
-            <li class="list-item">Start coding
-              <div class="desc">
-                <p><span>Done</span> <span>Edit</span></p>
-              </div>
-            </li>
-            <li class="list-item">I need a real BREAK
-              <div class="desc">
-                <p><span>Done</span> <span>Edit</span></p>
-              </div>
-            </li>
-            <br>
+            <?php
+              for ($i=0; $i < count($tab); $i++) {
+                if($tab[$i][5] === "")
+                {
+                  $addTitle =  $tab[$i][1];
+                  $addDec =  $tab[$i][2];
+                  echo "<li class=\"list-item\">
+                  $addTitle
+                    <div class=\"desc\">
+                      <p><span class=\"left\">$addDec</span> <span class=\"right haut\">Done Edit</span></p><br><br>
+                    </div>
+                  </li>";
+                }
+              }
+            ?>
           </div>
           <div class="barre-red" id="puce3">
             <li class="list-item">Go to the bus stop</li>
