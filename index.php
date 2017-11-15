@@ -9,7 +9,7 @@
   </head>
   <body>
     <?php
-      echo $eche;
+      echo $tab[0][0];
     ?>
     <div id="main">
       <div id="main-header">
@@ -29,40 +29,6 @@
       <div id="main-container">
         <!--tasks -->
         <ul class="list p2" id="todo">
-          <?php
-
-
-            include 'connexion.php';
-
-            $query=$bdd->prepare('SELECT task_id, task_title, task_description, task_start_timestamp, task_end_timestamp, task_ended_on_timestamp FROM task');
-            $query->execute();
-            $eche = "";
-            while($data = $query->fetch(PDO::FETCH_ASSOC)){
-              $task_id = $data['task_id'];
-              $task_title = $data['task_title'];
-              $task_description = $data['task_description'];
-              $task_start_timestamp = $data['task_start_timestamp'];
-              $task_end_timestamp = $data['task_end_timestamp'];
-              $task_ended_on_timestamp = $data['task_ended_on_timestamp'];
-              ?>
-              <div id="puce2">
-                <?php
-                if($task_ended_on_timestamp === "")
-                {
-                  echo "<li class=\"list-item\">
-                          $task_title
-                          <div class=\"desc\">
-                            <p><span class=\"left\">$task_description</span> <span class=\"right haut\">Done Edit</span></p><br></br>
-                          </div>
-                        </li>";
-                }
-                ?>
-              </div>
-
-            <?php
-            }
-            $query->CloseCursor();
-          ?>
 
           <div class="barre" id="puce1">
             <li class="list-item">Take a shower</li>
@@ -70,7 +36,29 @@
             <li class="list-item">Take a breakfast</li>
             <br>
           </div>
-
+          <div id="puce2">
+            <li class="list-item">Go to the bus stop
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <li class="list-item">Be at BeCode on 9:00
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <li class="list-item">Start coding
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <li class="list-item">I need a real BREAK
+              <div class="desc">
+                <p><span>Done</span> <span>Edit</span></p>
+              </div>
+            </li>
+            <br>
+          </div>
           <div class="barre-red" id="puce3">
             <li class="list-item">Go to the bus stop</li>
           </div>
