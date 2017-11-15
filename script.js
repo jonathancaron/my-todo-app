@@ -21,21 +21,6 @@ let puce1 = document.getElementById('puce1');
 let puce2 = document.getElementById('puce2');
 let puce3 = document.getElementById('puce3');
 
-
-
-/*function getEventTarget(e) {
-    e = e || window.event;
-    return e.target || e.srcElement;
-}
-
-var ul = document.getElementById('puce2');
-ul.onclick = function(event) {
-    var target = getEventTarget(event);
-    var next = target.nextSibling;
-    alert(next.innerHTML);
-
-
-};*/
 var listItems = document.getElementsByClassName('list-item');
 
 let i = 0;
