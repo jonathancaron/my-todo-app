@@ -3,7 +3,7 @@ body{
   padding: 0;
   font-family: sans-serif;
 }
-il{
+li{
   line-height: 30px;
   list-style-type: none;
   margin-left: -15px;
@@ -62,9 +62,8 @@ a{
 
 }
 #main{
-  border: 1px solid #bdbdbd;
+  border: 1px solid #cfcaca;
 }
-
 
 #footer-two{
   display: none;
@@ -72,15 +71,7 @@ a{
 #button_close{
   display: none;
 }
-.button {
-    background-color: #c1c0c0;
-    border: none;
-    color: white;
-    padding: 3px 12px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
+
 .p2{
   color: #969698;
   font-size: 18px;
@@ -126,5 +117,14 @@ a{
   font-size: 12px;
 }
 .ecrituremin2{
-  font-size: 14px;
+  font-size: 16px;
+}
+.button {
+    background-color: #c1c0c0;
+    border: none;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
 }

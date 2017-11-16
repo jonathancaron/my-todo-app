@@ -6,7 +6,6 @@
     <title>My Todo App</title>
     <!--<link rel="stylesheet" href="./reset.css">-->
     <link rel="stylesheet" href="./style.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -49,7 +48,7 @@
                     $date_timestamp = date('d/m/Y - H:m:s', $task_start_timestamp);
                     $date_end_timestamp = date('d/m/Y - H:m:s', $task_end_timestamp);
                     echo "<li class=\"list-item\">
-                    </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut ecrituremin2\">Done Edit <button class=\"button\" type=\"button\" name=\"delete\"><a href=\"./deletetask.php?id=$taskid\">Delete</a></button></span><br>
+                    </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut ecrituremin2\"><a href=\"./donetask.php?id=$taskid\">Done</a> Edit <a href=\"./deletetask.php?id=$taskid\" class=\"button\">Delete</a></span><br>
 
                         <p><span class=\"left\">$addDec</span></p><br><br>
                         <div class=\"ecrituremin\"> Start At <strong>$date_timestamp</strong><br>End At <strong>$date_end_timestamp</strong></div><hr/><br>
