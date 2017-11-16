@@ -4,7 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>My Todo App</title>
+    <!--<link rel="stylesheet" href="./reset.css">-->
     <link rel="stylesheet" href="./style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -29,15 +31,10 @@
         <ul class="list p2" id="todo">
 
           <div class="barre" id="puce1">
-            <?php
-              for ($i=0; $i < count($tab); $i++) {
+            <?php for ($i=0; $i < count($tab); $i++) {
                 if($tab[$i][5] > $tab[$i][4] && $tab[$i][5] !="")
-                {
-                  $addTitle =  $tab[$i][1];
-                  echo "<li class=\"list-item\">$addTitle</li>";
-                }
-              }
-            ?>
+                  {$addTitle =  $tab[$i][1];echo "<li class=\"list-item\">$addTitle</li>";}
+              } ?>
             <br>
           </div>
           <div id="puce2">
@@ -60,15 +57,10 @@
             <br>
           </div>
           <div class="barre-red" id="puce3">
-            <?php
-              for ($i=0; $i < count($tab); $i++) {
+            <?php for ($i=0; $i < count($tab); $i++) {
                 if($tab[$i][5] < $tab[$i][4] && $tab[$i][5] !="")
-                {
-                  $addTitle =  $tab[$i][1];
-                  echo "<li class=\"list-item\">$addTitle</li>";
-                }
-              }
-            ?>
+                  {$addTitle =  $tab[$i][1];echo "<li class=\"list-item\">$addTitle</li>";}
+              } ?>
             <br>
           </div>
         </ul>
@@ -80,28 +72,33 @@
 
 
       <div id="next-container">
-        <div class="p2 right"><a id="clear" href="#clear"><u>Clear</u></a></div>
-        <br>
-        <p class="title left">TITLE</p>
-        <br>
-        <input id="title" type="search" name="Title" placeholder="  My todo title">
-        <div class="clear"></div>
-        <br>
-        <p class="title left">DESCRIPTION</p>
-        <br>
-        <input id="desc"  type="search" name="Description" placeholder="  My todo description">
-        <div class="clear"></div>
-        <br>
-        <p class="title left">START AT</p>
-        <br>
-        <input id="start_date" type="date"  name="End at">
-        <div class="clear"></div>
-        <br>
-        <p class="title left">END AT</p>
-        <br>
-        <input id="end_date" type="date" name="End at">
+        <form action="addtask.php" method="post">
 
-        <div class="clear"></div>
+
+          <div class="p2 right"><a id="clear" href="#clear"><u>Clear</u></a></div>
+          <br>
+          <p class="title left">TITLE</p>
+          <br>
+          <input id="title" type="search" name="title" placeholder="  My todo title">
+          <div class="clear"></div>
+          <br>
+          <p class="title left">DESCRIPTION</p>
+          <br>
+          <input id="desc"  type="search" name="description" placeholder="  My todo description">
+          <div class="clear"></div>
+          <br>
+          <p class="title left">START AT</p>
+          <br>
+          <input id="start_date" type="datetime-local"  name="startat">
+          <div class="clear"></div>
+          <br>
+          <p class="title left">END AT</p>
+          <br>
+          <input id="end_date" type="datetime-local" name="endat">
+
+          <div class="clear"></div>
+          <button type="submit" name="button">Valider</button>
+        </form>
       </div>
 
 
@@ -123,9 +120,8 @@
       </div>
 
     </div>
-  </body>
-  <script type="text/javascript" src="jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
+  </body>
 
   </script>
 </html>
