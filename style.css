@@ -68,11 +68,10 @@ a{
     background-color: #c1c0c0;
     border: none;
     color: white;
-    padding: 5px 18px;
+    padding: 3px 12px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
 }
 .p2{
   color: #969698;
@@ -117,4 +116,7 @@ a{
 }
 .ecrituremin{
   font-size: 12px;
+}
+.ecrituremin2{
+  font-size: 14px;
 }
