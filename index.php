@@ -45,8 +45,8 @@
                   $taskid = $tab[$i][0];
                   $addTitle =  $tab[$i][1];
                   $addDec =  $tab[$i][2];
-                  $date_timestamp = date('d/m/Y', $task_start_timestamp);
-                  $date_end_timestamp = date('d/m/Y', $task_end_timestamp);
+                  $date_timestamp = date('d/m/Y - H:m:s', $task_start_timestamp);
+                  $date_end_timestamp = date('d/m/Y - H:m:s', $task_end_timestamp);
                   echo "<li class=\"list-item\">
                   </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut\">Done Edit <button class=\"button\" type=\"button\" name=\"delete\"><a href=\"./deletetask.php?id=$taskid\">Delete</a></button></span><br>
 
