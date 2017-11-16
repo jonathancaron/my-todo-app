@@ -47,13 +47,14 @@
                   echo "<li class=\"list-item\">
                   $addTitle
                     <div class=\"desc\">
-                      <p><span class=\"left\">$addDec</span> <span class=\"right haut\">Done Edit</span></p><br><br>
+                      <p><span class=\"left\">$addDec</span> <span class=\"right haut\">Done Edit <button class=\"button\" type=\"button\" name=\"delete\">Delete</button></span></p><br><br>
                     </div>
                   </li>";
                 }
 
               }
             ?>
+
             <br>
           </div>
           <div class="barre-red" id="puce3">
@@ -97,7 +98,7 @@
           <input id="end_date" type="datetime-local" name="endat">
 
           <div class="clear"></div>
-          <button type="submit" name="button">Valider</button>
+          <button class="button" type="submit" name="button">Valider</button>
         </form>
       </div>
 

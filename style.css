@@ -49,9 +49,6 @@ a{
   display: none;
 
 }
-.p2 span{
-  margin-left: 20px;
-}
 #main-footer{
   text-align: center;
 }
@@ -67,9 +64,22 @@ a{
 #button_close{
   display: none;
 }
+.button {
+    background-color: #c1c0c0;
+    border: none;
+    color: white;
+    padding: 5px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
 .p2{
   color: #969698;
   font-size: 18px;
+}
+.p2 span{
+  margin-left: 20px;
 }
 .barre{
   text-decoration: line-through;
