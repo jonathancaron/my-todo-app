@@ -42,12 +42,13 @@
               for ($i=0; $i < count($tab); $i++) {
                 if($tab[$i][5] === "")
                 {
+                  $taskid = $tab[$i][0];
                   $addTitle =  $tab[$i][1];
                   $addDec =  $tab[$i][2];
                   $date_timestamp = date('d/m/Y', $task_start_timestamp);
                   $date_end_timestamp = date('d/m/Y', $task_end_timestamp);
                   echo "<li class=\"list-item\">
-                  </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut\">Done Edit <button class=\"button\" type=\"button\" name=\"delete\">Delete</button></span><br>
+                  </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut\">Done Edit <button class=\"button\" type=\"button\" name=\"delete\"><a href=\"./deletetask.php?id=$taskid\">Delete</a></button></span><br>
 
                       <p><span class=\"left\">$addDec</span></p><br><br>
                       <div class=\"ecrituremin\"> Start At <strong>$date_timestamp</strong><br>End At <strong>$date_end_timestamp</strong></div><br><br>
