@@ -1,3 +1,16 @@
+let app = {
+  config:{
+    //AJOUTER ATTRIBUT AJAXURL
+
+  },
+  data:[
+
+  ],
+  start: function(){
+
+  }
+}
+
 let add = document.getElementById('button_add');
 let close = document.getElementById('button_close');
 

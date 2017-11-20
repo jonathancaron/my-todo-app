@@ -48,7 +48,7 @@
                     $date_timestamp = date('d/m/Y - H:m:s', $task_start_timestamp);
                     $date_end_timestamp = date('d/m/Y - H:m:s', $task_end_timestamp);
                     echo "<li class=\"list-item\">
-                    </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut ecrituremin2\"><a href=\"../core/request.php?iddone=$taskid\">Done</a> Edit <a href=\"./core/request.php?id=$taskid\" class=\"button\">Delete</a></span><br>
+                    </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut ecrituremin2\"><a href=\"./core/request.php?iddone=$taskid\">Done</a> Edit <a href=\"./core/request.php?id=$taskid\" class=\"button\">Delete</a></span><br>
 
                         <p><span class=\"left\">$addDec</span></p><br><br>
                         <div class=\"ecrituremin\"> Start At <strong>$date_timestamp</strong><br>End At <strong>$date_end_timestamp</strong></div><hr/><br>
