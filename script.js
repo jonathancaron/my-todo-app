@@ -10,7 +10,7 @@
 
   }
 }*/
-let app = {
+/*let app = {
   config : {
       ajaxUrl : "http://localhost:8888/todo_app/core/request.php"
   },
@@ -24,22 +24,25 @@ let app = {
           if (this.readyState === XMLHttpRequest.DONE) { //est-ce que requête done ?
               if (this.status === 200) { // 200 : everything is ok
                   app.data=JSON.parse(this.responseText);//parse : méthode qui transforme du texte en objet javascript MAIS ce texte est au format JSON
-                  var container_task = document.getElementById("container_task");
+                  var container_task = document.getElementById("puce1");
                   for (var i in app.data) { //for qui parcoure toutes les tâches
+                      console.log(app.data[i].task_title);
                       container_task.innerHTML+="<div>"+"<h2>"+app.data[i].task_title+"</h2>"+// on crée un p qui contient le titre de la tâche
                       "<p>"+app.data[i].task_description+"</p>"+"</div>";
                   }
                   //JSON : format qui permet de représenter de l'information, le MP3 du web
                   console.log("Réponse reçue : " + this.responseText);  // this = réponse du serveur, la rép se trouve dans l'attribut responseText qui est défini de base dans JS
               } else {
-                  console.log("Statut de la réponse : " + this.status + " : " + this.statusText);
+                  console.log("Statut de la réponse : " + this.status + " : " + this.responseText);
               }
           }
-      };
+      }
       request.open('GET', app.config.ajaxUrl, true);
       request.send(null);
     }
 }
+
+app.start();*/
 
 let add = document.getElementById('button_add');
 let close = document.getElementById('button_close');

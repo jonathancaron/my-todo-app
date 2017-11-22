@@ -1,7 +1,44 @@
 <?php
 declare(strict_types=1);
   include 'connexion.php';
+  if($_GET['q'] === "one"){
+    $q = intval($_GET['q']);
 
+    $query=$bdd->prepare("SELECT * FROM task WHERE task_id");
+    $query->execute();
+
+    echo "<div class=\"barre\" id=\"puce1\">";
+      while($row = $query->fetch(PDO::FETCH_ASSOC)){
+        if($row['task_ended_on_timestamp'] > $row['task_end_timestamp'] && $row['task_ended_on_timestamp'] !=""){
+          echo "<li class=\"list-item\">";
+            echo $row['task_title'];
+          echo "</li>";
+        }
+      }
+    echo "</div>";
+    echo "</br>";
+
+    $query->CloseCursor();
+  }
+  if($_GET['q'] === "two"){
+    $q = intval($_GET['q']);
+
+    $query=$bdd->prepare("SELECT * FROM task WHERE task_id");
+    $query->execute();
+
+    echo "<div id=\"puce2\">";
+      while($row = $query->fetch(PDO::FETCH_ASSOC)){
+        if($row['task_ended_on_timestamp'] > $row['task_end_timestamp'] && $row['task_ended_on_timestamp'] !=""){
+          echo "<li class=\"list-item\">";
+            echo $row['task_title'];
+          echo "</li>";
+        }
+      }
+    echo "</div>";
+    echo "</br>";
+
+    $query->CloseCursor();
+  }
   $query=$bdd->prepare('SELECT task_id, task_title, task_description, task_start_timestamp, task_end_timestamp, task_ended_on_timestamp FROM task');
   $query->execute();
   $tab = array();
