@@ -7,44 +7,13 @@
     <!--<link rel="stylesheet" href="./reset.css">-->
     <link rel="stylesheet" href="./style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-    function showTasks1() {
-      if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-      } else { // code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function() {
-        if (this.readyState==4 && this.status==200) {
-          document.getElementById("todo").innerHTML=this.responseText;
-          console.log(this.responseText);
-        }
-      }
-      xmlhttp.open("GET","./core/request.php?q=one",true);
-      xmlhttp.send();
-    }
-    showTasks1();
-    function showTasks2() {
-      if (window.XMLHttpRequest) {
-        // code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-      } else { // code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-      }
-      xmlhttp.onreadystatechange=function() {
-        if (this.readyState==4 && this.status==200) {
-          document.getElementById("todo").innerHTML=this.responseText;
-          console.log(this.responseText);
-        }
-      }
-      xmlhttp.open("GET","./core/request.php?q=two",true);
-      xmlhttp.send();
-    }
-    showTasks2();
-    </script>
+
   </head>
   <body>
+    <script>
+    
+
+    </script>
     <div id="main">
       <div id="main-border">
         <div id="main-header">
@@ -64,8 +33,36 @@
         <div id="main-container">
           <!--tasks -->
           <ul class="list p2" id="todo">
-            <div class="barre" id="puce1"></div>
-            <div id="puce2"></div>
+
+            <div class="barre" id="puce1">
+              <?php for ($i=0; $i < count($tab); $i++) {
+                  if($tab[$i][5] > $tab[$i][4] && $tab[$i][5] !="")
+                    {$addTitle =  $tab[$i][1];echo "<li class=\"list-item\">$addTitle</li>";}
+                } ?>
+              <br>
+            </div>
+            <div id="puce2">
+              <?php
+                for ($i=0; $i < count($tab); $i++) {
+                  if($tab[$i][5] === "")
+                  {
+                    $taskid = $tab[$i][0];
+                    $addTitle =  $tab[$i][1];
+                    $addDec =  $tab[$i][2];
+                    $date_timestamp = date('d/m/Y - H:m:s', $task_start_timestamp);
+                    $date_end_timestamp = date('d/m/Y - H:m:s', $task_end_timestamp);
+                    echo "<li class=\"list-item\">
+                    </span class\"left\">$addTitle</span> <div class=\"desc\"><span class=\"right haut ecrituremin2\"><a href=\"./core/request.php?iddone=$taskid\">Done</a> Edit <a href=\"./core/request.php?id=$taskid\" class=\"button\">Delete</a></span><br>
+                        <p><span class=\"left\">$addDec</span></p><br><br>
+                        <div class=\"ecrituremin\"> Start At <strong>$date_timestamp</strong><br>End At <strong>$date_end_timestamp</strong></div><hr/><br>
+                      </div>
+                    </li>";
+                  }
+                }
+              ?>
+
+              <br>
+            </div>
             <div class="barre-red" id="puce3">
               <?php for ($i=0; $i < count($tab); $i++) {
                   if($tab[$i][5] < $tab[$i][4] && $tab[$i][5] !="")
@@ -131,8 +128,9 @@
       </div>
 
     </div>
-  <script type="text/javascript" src="script.js"></script>
-  </body>
 
+  </body>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   </script>
 </html>
