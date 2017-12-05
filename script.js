@@ -1,17 +1,20 @@
-$(document).ready(function(){
-
-  $(".list-item").click(function() {
-    $(this).children().toggle();
-  });
+$(document).on('click', '.list-item', function() {
+    $(this).children(".desc").toggle();
 });
+
 recupPuce1();
-  function recupPuce1(){
+recupPuce2();
+function recupPuce1(){
+  $.post('./core/request.php?q=one', function(data){
+    $('#puce1').html(data);
+  });
+}
+function recupPuce2(){
+  $.post('./core/request.php?q=two', function(data){
+    $('#puce2').html(data);
+  });
+}
 
-    $.post('./core/request.php?q=one', function(data){
-      $('#puce1').html(data);
-    });
-
-  }
 
 
 let add = document.getElementById('button_add');

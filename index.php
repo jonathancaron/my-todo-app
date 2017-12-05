@@ -11,7 +11,7 @@
   </head>
   <body>
     <script>
-    
+
 
     </script>
     <div id="main">
@@ -35,15 +35,11 @@
           <ul class="list p2" id="todo">
 
             <div class="barre" id="puce1">
-              <?php for ($i=0; $i < count($tab); $i++) {
-                  if($tab[$i][5] > $tab[$i][4] && $tab[$i][5] !="")
-                    {$addTitle =  $tab[$i][1];echo "<li class=\"list-item\">$addTitle</li>";}
-                } ?>
-              <br>
+
             </div>
             <div id="puce2">
               <?php
-                for ($i=0; $i < count($tab); $i++) {
+                /*for ($i=0; $i < count($tab); $i++) {
                   if($tab[$i][5] === "")
                   {
                     $taskid = $tab[$i][0];
@@ -58,7 +54,7 @@
                       </div>
                     </li>";
                   }
-                }
+                }*/
               ?>
 
               <br>
