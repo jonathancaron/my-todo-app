@@ -39,9 +39,10 @@ declare(strict_types=1);
           $taskid = $task['task_id'];
           $addTitle =  $task['task_title'];
           $addDec =  $task['task_description'];
+          $date_timestamp= $task['$task_start_timestamp'];
+          $date_end_timestamp= $task['$task_end_timestamp'];
 
         ?>
-
           <li class="list-item">
           </span class"left"><?php echo $addTitle ?></span> <div class="desc"><span class="right haut ecrituremin2"><a href="./core/request.php?iddone=<?php echo $taskid ?>">Done</a> Edit <a href="./core/request.php?id=<?php echo $taskid ?>" class="button">Delete</a></span><br>
               <p><span class="left"><?php echo $addDec ?></span></p><br><br>
@@ -56,47 +57,28 @@ declare(strict_types=1);
     <?php
     $query->CloseCursor();
   }
-  /*if($_GET['q'] === "one"){
-    $q = intval($_GET['q']);
-
-    $query=$bdd->prepare("SELECT * FROM task WHERE task_id");
+  if($_GET['q'] === "three"){
+    $q = $_GET['q'];
+    $query=$bdd->prepare("SELECT * FROM task ORDER BY task_id DESC");
     $query->execute();
-
-    echo "<div class=\"barre\" id=\"puce1\">";
-      while($row = $query->fetch(PDO::FETCH_ASSOC)){
-        if($row['task_ended_on_timestamp'] > $row['task_end_timestamp'] && $row['task_ended_on_timestamp'] !=""){
-          echo "<li class=\"list-item\">";
-            echo $row['task_title'];
-          echo "</li>";
-        }
+    $tabPuce3 = array();
+    ?>
+    <?php
+      while($row = $query->fetch()){
+        $tabPuce3[] = $row;
       }
-    echo "</div>";
-    echo "</br>";
-
-    $query->CloseCursor();
-  }*/
-  /*if($_GET['q'] === "two"){
-    $q = intval($_GET['q']);
-
-    $query=$bdd->prepare("SELECT * FROM task WHERE task_id");
-    $query->execute();
-
-    echo "<div id=\"puce2\">";
-      while($row = $query->fetch(PDO::FETCH_ASSOC)){
-        if($row['task_ended_on_timestamp'] ==""){
-          echo "<li class=\"list-item\">";
-            echo $row['task_title'];
-            echo "<div class =\"desc\">";
-              echo $row['task_title'];
-            echo "</div>";
-          echo "</li>";
-        }
+      foreach ($tabPuce3 as $task) {
+        if($task['task_ended_on_timestamp'] < $task['task_end_timestamp'] && $task['task_ended_on_timestamp'] !=""){
+        ?>
+          <li><?php echo $task['task_title'] ?></li>
+            <?php
+          }
       }
-    echo "</div>";
-    echo "</br>";
-
+    ?>
+    </br>
+    <?php
     $query->CloseCursor();
-  }*/
+  }
 
 
   $query=$bdd->prepare('SELECT task_id, task_title, task_description, task_start_timestamp, task_end_timestamp, task_ended_on_timestamp FROM task');

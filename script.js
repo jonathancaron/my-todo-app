@@ -4,6 +4,7 @@ $(document).on('click', '.list-item', function() {
 
 recupPuce1();
 recupPuce2();
+recupPuce3();
 function recupPuce1(){
   $.post('./core/request.php?q=one', function(data){
     $('#puce1').html(data);
@@ -12,6 +13,11 @@ function recupPuce1(){
 function recupPuce2(){
   $.post('./core/request.php?q=two', function(data){
     $('#puce2').html(data);
+  });
+}
+function recupPuce3(){
+  $.post('./core/request.php?q=three', function(data){
+    $('#puce3').html(data);
   });
 }
 

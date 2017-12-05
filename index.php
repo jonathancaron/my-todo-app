@@ -60,10 +60,7 @@
               <br>
             </div>
             <div class="barre-red" id="puce3">
-              <?php for ($i=0; $i < count($tab); $i++) {
-                  if($tab[$i][5] < $tab[$i][4] && $tab[$i][5] !="")
-                    {$addTitle =  $tab[$i][1];echo "<li class=\"list-item\">$addTitle</li>";}
-                } ?>
+              
               <br>
             </div>
           </ul>
